@@ -3,7 +3,7 @@ from constants import HEADING_VALUES
 
 STARTING_POSITION = (0, -280)
 MOVE_DISTANCE = 10
-FINISH_LINE_Y = 280
+FINISH_LINE_Y = 290
 
 
 class Player(t.Turtle):

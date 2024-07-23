@@ -13,6 +13,7 @@ screen.listen()
 
 turtle = Player()
 car_manager = CarManager(screen)
+scoreboard = Scoreboard()
 
 
 def start_game():
