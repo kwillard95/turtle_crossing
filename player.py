@@ -9,15 +9,16 @@ FINISH_LINE_Y = 290
 class Player(t.Turtle):
     def __init__(self):
         super().__init__()
-
         self.shape("turtle")
         self.penup()
         self.setpos(STARTING_POSITION)
         self.setheading(HEADING_VALUES["up"])
 
-    def detect_car_collision(self):
-        # get all turtles on screen and see if turtle has made contact with one of them
-        pass
+    def detect_car_collision(self, cars):
+        for car in cars:
+            if self.distance(car) <= 10:
+                return True
+        return False
 
     def is_at_finish_line(self):
         return self.ycor() >= FINISH_LINE_Y
