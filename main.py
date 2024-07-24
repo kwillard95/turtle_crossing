@@ -27,8 +27,7 @@ def start_game():
             if is_car_collision:
                 game_running = False
             elif turtle.is_at_finish_line():
-                scoreboard.level += 1
-                scoreboard.write_level()
+                scoreboard.increase_level()
                 car_manager.increase_difficulty(scoreboard.level)
                 turtle.reset_player()
             else:
@@ -40,7 +39,7 @@ def start_game():
     run_game()
     if not game_running:
         screen.clear()
-        scoreboard.write_game_over()
+        scoreboard.game_over()
         screen.ontimer(start_game, 5000)
     screen.exitonclick()
 
