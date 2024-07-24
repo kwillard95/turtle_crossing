@@ -40,7 +40,8 @@ def start_game():
     run_game()
     if not game_running:
         screen.clear()
-        start_game()
+        scoreboard.write_game_over()
+        screen.ontimer(start_game, 5000)
     screen.exitonclick()
 
 

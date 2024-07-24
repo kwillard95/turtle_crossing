@@ -46,4 +46,4 @@ class CarManager:
         self.current_speed += MOVE_INCREMENT
         if level % 3 == 0:
             self.create_car_frequency -= 1
-        print(self.create_car_frequency)
+
