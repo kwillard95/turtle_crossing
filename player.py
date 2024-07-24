@@ -16,7 +16,7 @@ class Player(t.Turtle):
 
     def detect_car_collision(self, cars):
         for car in cars:
-            if self.distance(car) <= 10:
+            if self.distance(car) <= 23:
                 return True
         return False
 
